@@ -1,0 +1,37 @@
+body
+{
+  width: 100%;
+  height: 100%;
+  background: image-url('football.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.nav.nav-pills.nav-justified li a.active {
+  color: #000000 !important;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  color: #000000 !important;
+}
+
+.masthead h3 {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent !important;
+  h2 {
+    color: #FFFFFF !important;
+    font-weight: bold;
+    text-shadow: 0 0 2px #000000;
+  }
+  p {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 2px #000000;
+  }
+}
