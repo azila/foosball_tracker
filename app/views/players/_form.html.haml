@@ -1,0 +1,21 @@
+-if player.errors.any?
+  %h2 "#{pluralize(player.errors.count, "error")} prohibited this toy from being saved:"
+  %ul
+    - player.errors.full_messages.each do |msg|
+      %li= msg
+
+= form_for player do |f|
+  .field
+    = f.label :first_name
+    %br/
+    = f.text_field :first_name, class: 'form-control'
+  .field
+    = f.label :last_name
+    %br/
+    = f.text_field :last_name, class: 'form-control'
+  .field
+    %br/
+    = f.file_field :avatar
+  %br
+  .actions
+    = f.submit 'Save', class: 'btn btn-info'

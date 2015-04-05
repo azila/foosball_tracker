@@ -1,0 +1,16 @@
+.container
+  %h1.text-center Players ranking
+
+  %table.table.table-hover.table-striped.transparent.table-curved
+    %tr
+      %th 
+      %th First name
+      %th Last name
+      %th About player
+
+      -players.each do |p|
+        %tr
+          %td= link_to image_tag(p.avatar_url(:thumb), class: 'img-rounded'), player_path(p)
+          %td= p.first_name
+          %td= p.last_name
+          %td= link_to "About #{p.first_name}", player_path(p)

@@ -35,3 +35,92 @@ body
     text-shadow: 0 0 2px #000000;
   }
 }
+
+h1.text-center {
+  padding-bottom: 10px;
+  color: #FFFFFF;
+  font-size: 50px;
+  text-shadow: rgb(150, 150, 150) 2px 2px 2px
+}
+
+.white-form {
+  margin-top: 5%;
+  background: rgba(248,248,248,0.6);
+  padding-top: 50px;
+  padding-bottom: 60px;
+  width: 55%;
+  border-radius: 5px;
+  h1, h2{
+    padding-bottom: 50px;
+    color: #7e7777;
+    font-size: 50px;
+    text-shadow: rgb(150, 150, 150) 2px 2px 2px
+  }h2{
+    padding-bottom: 30px;
+  }
+}
+
+.transparent{
+  margin-top: 1%;
+  background: rgba(248,248,248,0.6);
+  border-radius: 5px;
+}
+
+.transparent-profile{
+  width: 100%;
+  margin-top: 5%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(248,248,248,0.6);
+  border-radius: 5px;
+  img {
+    margin-botton: 5%;
+  }
+}
+
+.table-hover>tbody>tr:hover>td {
+  background-color: #550055;
+  color:#eeeeee;
+  a {
+    color:#eeeeee;
+  }
+}
+
+.table-curved {
+    border-collapse: separate;
+}
+.table-curved {
+    border: solid #ccc 1px;
+    border-radius: 6px;
+    border-left:0px;
+}
+.table-curved td, .table-curved th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.table-curved th {
+    border-top: none;
+}
+.table-curved th:first-child {
+    border-radius: 6px 0 0 0;
+}
+.table-curved th:last-child {
+    border-radius: 0 6px 0 0;
+}
+.table-curved th:only-child{
+    border-radius: 6px 6px 0 0;
+}
+.table-curved tr:last-child td:first-child {
+    border-radius: 0 0 0 6px;
+}
+.table-curved tr:last-child td:last-child {
+    border-radius: 0 0 6px 0;
+}
+
+.center img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  border-radius: 20px 20px 20px 20px;
+}

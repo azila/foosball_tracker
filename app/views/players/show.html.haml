@@ -1,0 +1,25 @@
+.container
+  .row.center-block.transparent-profile
+    %h1.text-center
+      = player.first_name
+      = player.last_name
+    .col-sm-3
+      .center
+        = image_tag(player.avatar_url(:profile), class: 'img-responsive')
+      %ul.list-group
+        %li.list-group-item.text-right
+          %span.pull-left
+            %strong Won
+          = "1"
+        %li.list-group-item.text-right
+          %span.pull-left
+            %strong Lost
+          = "2"
+        %li.list-group-item.text-right
+          %span.pull-left
+            %strong Average points
+          = "3"
+        %li.list-group-item.text-right
+          %span.pull-left
+            %strong Total games
+          = "4"

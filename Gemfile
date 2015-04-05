@@ -12,6 +12,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg'
 gem 'haml'
 gem 'bootstrap-sass', '~> 3.3.4.1'
+gem 'carrierwave'
+gem 'mini_magick', '~> 4.2.0'
+gem 'decent_exposure'
 
 group :development, :test do
   gem 'byebug'
