@@ -1,9 +1,4 @@
--if player.errors.any?
-  %h2 "#{pluralize(player.errors.count, "error")} prohibited this toy from being saved:"
-  %ul
-    - player.errors.full_messages.each do |msg|
-      %li= msg
-
+= render 'layouts/errors', object: player
 = form_for player do |f|
   .field
     = f.label :first_name

@@ -1,0 +1,19 @@
+= render 'layouts/errors', object: match
+= form_for match do |f|
+  .field
+    = f.select :player_1_id, players.map { |player| [player.full_name, player.id] }, {include_blank: '-select-'}
+    \ vs 
+    = f.select :player_2_id, players.map { |player| [player.full_name, player.id] }, {include_blank: '-select-'}
+  .field
+    = f.label "Result"
+    %br
+    = f.text_field :player_1_score, class: 'score'
+    \:
+    = f.text_field :player_2_score, class: 'score'
+  .field
+    = f.label :match_date
+    %br
+    = select_date Date.current, prefix: :match_date
+  %br
+  .actions
+    = f.submit 'Save', class: 'btn btn-info'
