@@ -3,6 +3,7 @@ class PlayersController < ApplicationController
   expose(:players)
 
   def index
+    self.players = Player.paginate(page: params[:page], per_page: 7)
   end
 
   def show

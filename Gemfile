@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.3.4.1'
 gem 'carrierwave'
 gem 'mini_magick', '~> 4.2.0'
 gem 'decent_exposure'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'byebug'
