@@ -1,0 +1,15 @@
+.container
+  %h1.text-center All matches
+
+  %table.table.table-hover.table-striped.transparent.table-curved
+    %tr
+      %th First player
+      %th Second player
+      %th Final score
+
+      -matches.each do |m|
+        %tr
+          %td= link_to m.player_1.full_name, player_path(m.player_1)
+          %td= link_to m.player_1.full_name, player_path(m.player_2)
+          %td= "#{m.player_1_score} : #{m.player_2_score}"
+  %p= will_paginate matches

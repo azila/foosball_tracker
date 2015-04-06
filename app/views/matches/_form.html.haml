@@ -13,7 +13,7 @@
   .field
     = f.label :match_date
     %br
-    = select_date Date.current, prefix: :match_date
+    = f.date_select :match_date
   %br
   .actions
     = f.submit 'Save', class: 'btn btn-info'

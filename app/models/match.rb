@@ -8,6 +8,8 @@ class Match < ActiveRecord::Base
   validate :always_one_winner
   validate :not_draw
 
+  default_scope { order('created_at DESC') }
+
   private
   def not_same_player
     errors.add(:base, 'First player should not be the same as second.') if player_1_id == player_2_id

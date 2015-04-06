@@ -31,18 +31,18 @@ describe PlayersController do
     describe 'with valid params' do
       it 'creates a new Player' do
         expect {
-          	post :create, {player: { 'first_name': player.first_name, 'last_name': player.last_name } }
+          	post :create, { player: attributes_for(:player) }
         }.to change(Player, :count).by(1)
       end
 
       it 'redirects to the created player' do
-        post :create, { player: { 'first_name': player.first_name, 'last_name': player.last_name } }
+        post :create, { player: attributes_for(:player) }
         expect(response).to redirect_to(players_path)
       end
     end
 
     describe 'with invalid params' do
-      it 'exposes a newly created but unsaved category' do
+      it 'exposes a newly created but unsaved player' do
         Player.any_instance.stub(:save).and_return(false)
         post :create, {player: { 'first_name': '' } }
         expect(controller.player).to be_a_new(Player)
