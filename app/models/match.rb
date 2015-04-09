@@ -10,6 +10,11 @@ class Match < ActiveRecord::Base
 
   default_scope { order('created_at DESC') }
 
+  scope :lead_wins, -> (id) { where(player_1_id: id, player_1_score: 10)}
+  scope :follow_wins, -> (id) { where(player_2_id: id, player_2_score: 10)}
+  scope :lead_defeats, -> (id) { where(player_1_id: id).where.not(player_1_score: 10)}
+  scope :follow_defeats, -> (id) { where(player_2_id: id).where.not(player_2_score: 10)}
+
   private
   def not_same_player
     errors.add(:base, 'First player should not be the same as second.') if player_1_id == player_2_id

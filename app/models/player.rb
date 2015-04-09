@@ -4,8 +4,24 @@ class Player < ActiveRecord::Base
 
   validates :first_name, :last_name, presence: true
   mount_uploader :avatar, AvatarUploader
-
+  
   def full_name
     "#{first_name} #{last_name}"
+  end
+
+  def total_games
+    lead_matches + follow_matches
+  end
+
+  def wins
+    Match.lead_wins(self.id) + Match.follow_wins(self.id)
+  end
+
+  def defeats
+    Match.lead_defeats(self.id) + Match.follow_defeats(self.id)
+  end
+
+  def average
+    lead_matches.sum(:player_1_score) + follow_matches.sum(:player_2_score)
   end
 end

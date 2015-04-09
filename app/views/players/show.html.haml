@@ -10,16 +10,42 @@
         %li.list-group-item.text-right
           %span.pull-left
             %strong Won
-          = "1"
+          = player.wins.count
         %li.list-group-item.text-right
           %span.pull-left
             %strong Lost
-          = "2"
+          = player.defeats.count
         %li.list-group-item.text-right
           %span.pull-left
             %strong Average points
-          = "3"
+          = player.average
         %li.list-group-item.text-right
           %span.pull-left
             %strong Total games
-          = "4"
+          = player.total_games.count
+    .col-sm-9
+      %h2.text-center Wins
+      - if player.wins.count == 0
+        %h4.text-center No victories so far.. Keep practising!
+      - else 
+        - player.wins.each do |win|
+          %h4.text-center
+            = win.player_1.full_name 
+            %strong
+              = win.player_1_score 
+              = ':'
+              = win.player_2_score
+            = win.player_2.full_name
+      %br
+      %h2.text-center Defeats
+      - if player.defeats.count == 0
+        %h4.text-center No defeats! Good job!
+      - else 
+        - player.defeats.each do |defeat|
+          %h4.text-center
+            = defeat.player_1.full_name 
+            %strong
+              = defeat.player_1_score 
+              = ':'
+              = defeat.player_2_score
+            = defeat.player_2.full_name
