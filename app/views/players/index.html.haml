@@ -1,17 +1,17 @@
 .container
-  %h1.text-center Players ranking
-
-  %table.table.table-hover.table-striped.transparent.table-curved
-    %tr
-      %th 
-      %th First name
-      %th Last name
-      %th About player
-
-      -players.each do |p|
+  %h1.text-center Ranking of players
+  .row
+    .col-sm-6.col-sm-offset-3
+      %table.table.table-hover.table-striped.transparent.table-curved
         %tr
-          %td= link_to image_tag(p.avatar_url(:thumb), class: 'img-rounded'), player_path(p)
-          %td= p.first_name
-          %td= p.last_name
-          %td= link_to "About #{p.first_name}", player_path(p)
-  %p= will_paginate players
+          %th 
+          %th
+          %th Full name
+
+          -players.each_with_index do |p, i|
+            %tr
+              %td.text-center
+                %strong= i + 1
+              %td= link_to image_tag(p.avatar_url(:thumb), class: 'img-rounded'), player_path(p)
+              %td= link_to p.full_name, player_path(p)
+      %p.pagination= will_paginate players

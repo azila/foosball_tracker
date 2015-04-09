@@ -21,7 +21,7 @@ class Player < ActiveRecord::Base
     Match.lead_defeats(self.id) + Match.follow_defeats(self.id)
   end
 
-  def average
+  def points
     lead_matches.sum(:player_1_score) + follow_matches.sum(:player_2_score)
   end
 end

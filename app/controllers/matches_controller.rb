@@ -4,7 +4,7 @@ class MatchesController < ApplicationController
   expose(:matches)
 
   def index
-  	self.matches = Match.paginate(page: params[:page], per_page: 7)
+  	self.matches = Match.paginate(page: params[:page], per_page: 10)
   end
 
   def new

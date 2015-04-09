@@ -39,7 +39,7 @@ body
 h1.text-center {
   padding-bottom: 10px;
   color: #FFFFFF;
-  font-size: 50px;
+  font-size: 30px;
   text-shadow: rgb(150, 150, 150) 2px 2px 2px
 }
 
@@ -53,7 +53,7 @@ h1.text-center {
   h1, h2{
     padding-bottom: 50px;
     color: #7e7777;
-    font-size: 50px;
+    font-size: 30px;
     text-shadow: rgb(150, 150, 150) 2px 2px 2px
   }h2{
     padding-bottom: 30px;
@@ -128,4 +128,12 @@ h1.text-center {
 .score {
   width: 35px;
   border-radius: 5px;
+}
+
+.pagination {
+  color: #FFFFFF;
+  font-size: 15px;
+  a {
+    color: #FFFFFF;;
+  }
 }

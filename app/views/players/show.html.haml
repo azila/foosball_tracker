@@ -17,8 +17,8 @@
           = player.defeats.count
         %li.list-group-item.text-right
           %span.pull-left
-            %strong Average points
-          = player.average
+            %strong Gained points
+          = player.points
         %li.list-group-item.text-right
           %span.pull-left
             %strong Total games
@@ -26,7 +26,7 @@
     .col-sm-9
       %h2.text-center Wins
       - if player.wins.count == 0
-        %h4.text-center No victories so far.. Keep practising!
+        %h4.text-center No victories so far.. Keep practicing!
       - else 
         - player.wins.each do |win|
           %h4.text-center
